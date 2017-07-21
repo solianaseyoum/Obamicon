@@ -1,10 +1,10 @@
 from PIL import Image
 
 # RGB values for recoloring.
-lightYellow = (249, 237, 162)
-purple = (226, 162, 249)
-lightBlue = (164, 237, 252)
-randomColor = (249, 163, 162)
+darkBlue = (0, 51, 76)
+red = (217, 26, 33)
+lightBlue = (112, 150, 158)
+yellow = (252, 227, 166)
 
 
 # Import image.
@@ -21,11 +21,11 @@ for count in range(length):
     rgb_list = image_list[count]
     rgb_sum = rgb_list[0] + rgb_list[1] + rgb_list[2]
     if rgb_sum < 182:
-        pixel = lightYellow
+        pixel = darkBlue
         recolored.append(pixel)
         # color it dark blue
     elif rgb_sum >= 182 and rgb_sum < 364:
-        pixel = purple
+        pixel = red
         recolored.append(pixel)
         # color it red
     elif rgb_sum >= 364 and rgb_sum < 546:
@@ -33,7 +33,7 @@ for count in range(length):
         recolored.append(pixel)
         # color it light blue
     else:
-        pixel = randomColor
+        pixel = yellow
         recolored.append(pixel)
         # color it yellow
 
